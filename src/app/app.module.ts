@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 //modules
 import { AppRoutingModule } from './app.routing.module';
 import { SharedModule } from './shared';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 //components
 import { AppComponent } from './app.component';
@@ -19,11 +20,12 @@ import { HomeComponent } from './pages'
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule,
+    HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

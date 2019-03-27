@@ -5,24 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  animations: [
-    trigger('moveInLeft', [
-      transition('void=> *', [style({transform: 'translateX(300px)'}),
-        animate('200ms ease-out', keyframes([
-          style({transform: 'translateX(300px)'}),
-          style({transform: 'translateX(0)'})
-
-        ]))]),
-      transition('*=>void', [style({transform: 'translateX(0px)'}),
-        animate('250ms ease-in',   keyframes([
-          style({transform: 'translateY(-20px)', opacity: 1, offset: 0.2}),
-          style({transform: 'translateY(250px)', opacity: 0 , offset: 1})
-
-        ]))])
-
-    ])
-  ]
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
   todoArray: string[] = [];
